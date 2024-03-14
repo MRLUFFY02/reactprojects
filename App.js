@@ -9,16 +9,22 @@ function App()
   return (
     <div className="App">
       <h1>Welcome ReactJs⭐👌👌!!!</h1>
-      <Msg/>
+      <div className='container'>
+      <Msg name="Aravind" pic="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSfQ1r9t0OtolRp6JzSQ5UJhn0w86DHmeugOeRXCUp0ZIT0QuIB"/>
+      <Msg name="Nirmal" pic="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4kVoohSv99m7iH8irz5yKQe2YrA6zXRfLxDvPyoGuNYGlU4Xw"/>
+      <Msg name="Balaji" pic="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYWgIy_ffTNaNuIvCsNT9aYcXzR_wEwM3WzMue6y9SdPfHziTk"/>
+      </div>
+
     </div>
   );
   //JSX ends
 }
-function Msg()
+function Msg(props)
 {
   return(
-    <div>
-      <h1>Hello Aravind</h1>
+    <div className='msg'>
+      <h1>Hello {props.name}</h1>
+      <img src={props.pic}/>
     </div>
   )
 }
